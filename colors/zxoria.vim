@@ -1,5 +1,12 @@
 " Vim color file
 "
+" Name:       zxoria.vim
+" Version:    1.0
+" Maintainer: Hannes Landstedt <hannes.landstedt@gmail.com>
+"
+" Forked from xoria256.vim (see below).
+"
+" ....
 " Name:       xoria256.vim
 " Version:    1.5
 " Maintainer:	Dmitriy Y. Zotikov (xio) <xio@ungrund.org>
@@ -32,44 +39,56 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "xoria256"
+let colors_name = "zxoria"
 "}}}
 " Colours {{{1
 "" General {{{2
-hi Normal       ctermfg=252 guifg=#d0d0d0 ctermbg=234 guibg=#1c1c1c cterm=none gui=none
+" [KHL] hi Normal       ctermfg=252 guifg=#d0d0d0 ctermbg=234 guibg=#1c1c1c cterm=none gui=none
+hi Normal       ctermfg=252 guifg=#d0d0d0 ctermbg=233 guibg=#101510 cterm=none gui=none
+hi ColorColumn  ctermbg=16 guibg=#000000
 hi Cursor                                 ctermbg=214 guibg=#ffaf00
 hi CursorColumn                           ctermbg=238 guibg=#444444
-hi CursorLine                             ctermbg=237 guibg=#3a3a3a cterm=none gui=none
+" [KHL] hi CursorLine                             ctermbg=237 guibg=#3a3a3a cterm=none gui=none
+hi CursorLine               cterm=none    ctermbg=none guibg=#1a2f1a
 hi Error        ctermfg=15  guifg=#ffffff ctermbg=1   guibg=#800000
 hi ErrorMsg     ctermfg=15  guifg=#ffffff ctermbg=1   guibg=#800000
 hi FoldColumn   ctermfg=247 guifg=#9e9e9e ctermbg=233 guibg=#121212
-hi Folded       ctermfg=255 guifg=#eeeeee ctermbg=60  guibg=#5f5f87
+" [KHL] hi Folded       ctermfg=255 guifg=#eeeeee ctermbg=60  guibg=#5f5f87
+hi Folded       ctermfg=36 guifg=#00af87 ctermbg=bg  guibg=bg
 hi IncSearch    ctermfg=0   guifg=#000000 ctermbg=223 guibg=#ffdfaf cterm=none gui=none
 hi LineNr       ctermfg=247 guifg=#9e9e9e ctermbg=233 guibg=#121212
 hi MatchParen   ctermfg=188 guifg=#dfdfdf ctermbg=68  guibg=#5f87df cterm=bold gui=bold
 " TODO
 " hi MoreMsg
-hi NonText      ctermfg=247 guifg=#9e9e9e ctermbg=233 guibg=#121212 cterm=bold gui=bold
-hi Pmenu        ctermfg=0   guifg=#000000 ctermbg=250 guibg=#bcbcbc
-hi PmenuSel     ctermfg=255 guifg=#eeeeee ctermbg=243 guibg=#767676
+" [KHL] hi NonText      ctermfg=247 guifg=#9e9e9e ctermbg=233 guibg=#121212 cterm=bold gui=bold
+hi NonText      ctermfg=248 guifg=#a8a8a8 ctermbg=16 guibg=#000000  cterm=bold gui=bold
+" [KHL] hi Pmenu        ctermfg=0   guifg=#000000 ctermbg=250 guibg=#bcbcbc
+hi Pmenu        ctermfg=10   guifg=#df875f ctermbg=0 guibg=#1a2f1a
+" [KHL] hi PmenuSel     ctermfg=255 guifg=#eeeeee ctermbg=243 guibg=#767676
+hi PmenuSel     ctermfg=12   guifg=#dfff5f ctermbg=0 guibg=#1c1c1c
 hi PmenuSbar                              ctermbg=252 guibg=#d0d0d0
 hi PmenuThumb   ctermfg=243 guifg=#767676
-hi Search       ctermfg=0   guifg=#000000 ctermbg=149 guibg=#afdf5f
-hi SignColumn   ctermfg=248 guifg=#a8a8a8
+" [KHL] hi Search       ctermfg=0   guifg=#000000 ctermbg=149 guibg=#afdf5f
+hi Search       ctermfg=none guifg=#000000 ctermbg=12 guibg=#afdf5f
+" [KHL] hi SignColumn   ctermfg=248 guifg=#a8a8a8
+hi SignColumn   ctermfg=248 guifg=#a8a8a8 ctermbg=16 guibg=#000000
 hi SpecialKey   ctermfg=77  guifg=#5fdf5f
 hi SpellBad     ctermfg=160 guifg=fg      ctermbg=bg                cterm=underline               guisp=#df0000
 hi SpellCap     ctermfg=189 guifg=#dfdfff ctermbg=bg  guibg=bg      cterm=underline gui=underline
 hi SpellRare    ctermfg=168 guifg=#df5f87 ctermbg=bg  guibg=bg      cterm=underline gui=underline
 hi SpellLocal   ctermfg=98  guifg=#875fdf ctermbg=bg  guibg=bg      cterm=underline gui=underline
-hi StatusLine   ctermfg=15  guifg=#ffffff ctermbg=239 guibg=#4e4e4e cterm=bold gui=bold
-hi StatusLineNC ctermfg=249 guifg=#b2b2b2 ctermbg=237 guibg=#3a3a3a cterm=none gui=none
+" [KHL] hi StatusLine   ctermfg=15  guifg=#ffffff ctermbg=239 guibg=#4e4e4e cterm=bold gui=bold
+hi StatusLine   ctermfg=154 guifg=#afff00 ctermbg=232 guibg=#080808 cterm=bold gui=bold
+" [KHL] hi StatusLineNC ctermfg=249 guifg=#b2b2b2 ctermbg=237 guibg=#3a3a3a cterm=none gui=none
+hi StatusLineNC ctermfg=8 guifg=#df5f00 ctermbg=232  guibg=#080808 cterm=none gui=none
 hi TabLine      ctermfg=fg  guifg=fg      ctermbg=242 guibg=#666666 cterm=none gui=none
 hi TabLineFill  ctermfg=fg  guifg=fg      ctermbg=237 guibg=#3a3a3a cterm=none gui=none
 " FIXME
 hi Title        ctermfg=225 guifg=#ffdfff
 hi Todo         ctermfg=0   guifg=#000000 ctermbg=184 guibg=#dfdf00
 hi Underlined   ctermfg=39  guifg=#00afff                           cterm=underline gui=underline
-hi VertSplit    ctermfg=237 guifg=#3a3a3a ctermbg=237 guibg=#3a3a3a cterm=none gui=none
+" [KHL] hi VertSplit    ctermfg=237 guifg=#3a3a3a ctermbg=237 guibg=#3a3a3a cterm=none gui=none
+hi VertSplit    ctermfg=237 guifg=#3a3a3a ctermbg=bg guibg=bg cterm=none gui=none
 " hi VIsualNOS    ctermfg=24  guifg=#005f87 ctermbg=153 guibg=#afdfff cterm=none gui=none
 " hi Visual       ctermfg=24  guifg=#005f87 ctermbg=153 guibg=#afdfff
 hi Visual       ctermfg=255 guifg=#eeeeee ctermbg=96  guibg=#875f87
@@ -78,7 +97,8 @@ hi VisualNOS    ctermfg=255 guifg=#eeeeee ctermbg=60  guibg=#5f5f87
 hi WildMenu     ctermfg=0   guifg=#000000 ctermbg=150 guibg=#afdf87 cterm=bold gui=bold
 
 "" Syntax highlighting {{{2
-hi Comment      ctermfg=244 guifg=#808080
+" [KHL] hi Comment      ctermfg=244 guifg=#808080
+hi Comment      ctermfg=244 guifg=#5f875f
 hi Constant     ctermfg=229 guifg=#ffffaf
 hi Identifier   ctermfg=182 guifg=#dfafdf                           cterm=none
 hi Ignore       ctermfg=238 guifg=#444444
