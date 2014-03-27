@@ -1,7 +1,7 @@
 " Vim color file
 "
 " Name:       zxoria.vim
-" Version:    1.0
+" Version:    1.7
 " Maintainer: Hannes Landstedt <hannes.landstedt@gmail.com>
 "
 " Forked from xoria256.vim (see below).
@@ -43,19 +43,26 @@ let colors_name = "zxoria"
 "}}}
 " Colours {{{1
 "" General {{{2
-" [KHL] hi Normal       ctermfg=252 guifg=#d0d0d0 ctermbg=234 guibg=#1c1c1c cterm=none gui=none
-hi Normal       ctermfg=252 guifg=#d0d0d0 ctermbg=233 guibg=#101510 cterm=none gui=none
-hi ColorColumn  ctermbg=16 guibg=#000000
-hi Cursor                                 ctermbg=214 guibg=#ffaf00
-hi CursorColumn                           ctermbg=238 guibg=#444444
+"" [HL-20140327 2218] It'd be nice if all commands followed the format:
+"" name         cterm       ctermfg       ctermbg     gui           guifg           guibg
+hi Normal       cterm=none  ctermfg=252   ctermbg=233 gui=none      guifg=#d0d0d0   guibg=#101510
+hi ColorColumn  ctermbg=16  guibg=#000000
+" [KHL] why can i not set Cursor? is my terminal overriding it? :verbose hi Cursor shows what's expected
+hi Cursor       ctermfg=154               ctermbg=154 guibg=#ffaf00
+hi CursorColumn             cterm=none    ctermbg=232 guibg=#444444
+hi CursorLine               cterm=none    ctermbg=232 guibg=#1a2f1a
+"hi Cursor cterm=none ctermbg=2 guibg=#7FFF00
+"hi Cursor cterm=none ctermbg=2 guibg=#7FFF00
 " [KHL] hi CursorLine                             ctermbg=237 guibg=#3a3a3a cterm=none gui=none
-hi CursorLine               cterm=none    ctermbg=none guibg=#1a2f1a
+hi CursorLineNr ctermfg=46
 hi Error        ctermfg=15  guifg=#ffffff ctermbg=1   guibg=#800000
 hi ErrorMsg     ctermfg=15  guifg=#ffffff ctermbg=1   guibg=#800000
 hi FoldColumn   ctermfg=247 guifg=#9e9e9e ctermbg=233 guibg=#121212
 " [KHL] hi Folded       ctermfg=255 guifg=#eeeeee ctermbg=60  guibg=#5f5f87
-hi Folded       ctermfg=36 guifg=#00af87 ctermbg=bg  guibg=bg
-hi IncSearch    ctermfg=0   guifg=#000000 ctermbg=223 guibg=#ffdfaf cterm=none gui=none
+"hi Folded       ctermfg=none  guifg=#00af87 ctermbg=bg  guibg=bg
+hi Folded                   ctermfg=238   ctermbg=bg                guifg=#444444   guibg=bg
+hi IncSearch    cterm=none  ctermfg=0     ctermbg=10                                guibg=#00FF00
+hi Search       cterm=none  ctermfg=0     ctermbg=2                                 guibg=#008800
 hi LineNr       ctermfg=247 guifg=#9e9e9e ctermbg=233 guibg=#121212
 hi MatchParen   ctermfg=188 guifg=#dfdfdf ctermbg=68  guibg=#5f87df cterm=bold gui=bold
 " TODO
@@ -69,7 +76,8 @@ hi PmenuSel     ctermfg=12   guifg=#dfff5f ctermbg=0 guibg=#1c1c1c
 hi PmenuSbar                              ctermbg=252 guibg=#d0d0d0
 hi PmenuThumb   ctermfg=243 guifg=#767676
 " [KHL] hi Search       ctermfg=0   guifg=#000000 ctermbg=149 guibg=#afdf5f
-hi Search       ctermfg=none guifg=#000000 ctermbg=12 guibg=#afdf5f
+"hi Search       ctermfg=none guifg=#000000 ctermbg=12 guibg=#afdf5f
+"hi Search    ctermfg=0   guifg=#000000 ctermbg=223 guibg=#ffdfaf cterm=none gui=none
 " [KHL] hi SignColumn   ctermfg=248 guifg=#a8a8a8
 hi SignColumn   ctermfg=248 guifg=#a8a8a8 ctermbg=16 guibg=#000000
 hi SpecialKey   ctermfg=77  guifg=#5fdf5f
