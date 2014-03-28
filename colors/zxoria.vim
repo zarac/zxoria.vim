@@ -45,12 +45,12 @@ let colors_name = "zxoria"
 "" General {{{2
 "" [HL-20140327 2218] It'd be nice if all commands followed the format:
 "" name         cterm       ctermfg       ctermbg     gui           guifg           guibg
-hi Normal       cterm=none  ctermfg=252   ctermbg=232 gui=none      guifg=#d0d0d0   guibg=#101510
+hi Normal       cterm=none  ctermfg=252   ctermbg=0 gui=none      guifg=#d0d0d0   guibg=#101510
 hi ColorColumn  ctermbg=16  guibg=#000000
 " [KHL] why can i not set Cursor? is my terminal overriding it? :verbose hi Cursor shows what's expected
 hi Cursor       ctermfg=154               ctermbg=154 guibg=#ffaf00
-hi CursorColumn             cterm=none    ctermbg=0 guibg=#444444
-hi CursorLine               cterm=none    ctermbg=0 guibg=#1a2f1a
+hi CursorColumn             cterm=none    ctermbg=233 guibg=#444444
+hi CursorLine               cterm=none    ctermbg=233 guibg=#1a2f1a
 "hi Cursor cterm=none ctermbg=2 guibg=#7FFF00
 "hi Cursor cterm=none ctermbg=2 guibg=#7FFF00
 " [KHL] hi CursorLine                             ctermbg=237 guibg=#3a3a3a cterm=none gui=none
@@ -61,18 +61,17 @@ hi FoldColumn   ctermfg=247 guifg=#9e9e9e ctermbg=233 guibg=#121212
 " [KHL] hi Folded       ctermfg=255 guifg=#eeeeee ctermbg=60  guibg=#5f5f87
 "hi Folded       ctermfg=none  guifg=#00af87 ctermbg=bg  guibg=bg
 hi Folded                   ctermfg=238   ctermbg=bg                guifg=#444444   guibg=bg
-hi IncSearch    cterm=none  ctermfg=0     ctermbg=10                                guibg=#00FF00
-hi Search       cterm=none  ctermfg=0     ctermbg=2                                 guibg=#008800
+hi Search       cterm=none  ctermfg=46     ctermbg=bg
+hi IncSearch    cterm=none  ctermfg=0     ctermbg=46
 hi LineNr       ctermfg=247 guifg=#9e9e9e ctermbg=0 guibg=#121212
 hi MatchParen   ctermfg=188 guifg=#dfdfdf ctermbg=68  guibg=#5f87df cterm=bold gui=bold
 " TODO
 " hi MoreMsg
 " [KHL] hi NonText      ctermfg=247 guifg=#9e9e9e ctermbg=233 guibg=#121212 cterm=bold gui=bold
-hi NonText      ctermfg=248 guifg=#a8a8a8 ctermbg=16 guibg=#000000  cterm=bold gui=bold
-" [KHL] hi Pmenu        ctermfg=0   guifg=#000000 ctermbg=250 guibg=#bcbcbc
-hi Pmenu        ctermfg=10   guifg=#df875f ctermbg=0 guibg=#1a2f1a
+hi NonText      ctermfg=248 guifg=#a8a8a8 ctermbg=0 guibg=#000000  cterm=bold gui=bold
 " [KHL] hi PmenuSel     ctermfg=255 guifg=#eeeeee ctermbg=243 guibg=#767676
-hi PmenuSel     ctermfg=12   guifg=#dfff5f ctermbg=0 guibg=#1c1c1c
+hi Pmenu        ctermfg=12   guifg=#dfff5f ctermbg=0 guibg=#1c1c1c
+hi PmenuSel     ctermfg=10   guifg=#df875f ctermbg=0 guibg=#1a2f1a
 hi PmenuSbar                              ctermbg=252 guibg=#d0d0d0
 hi PmenuThumb   ctermfg=243 guifg=#767676
 " [KHL] hi Search       ctermfg=0   guifg=#000000 ctermbg=149 guibg=#afdf5f
