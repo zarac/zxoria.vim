@@ -45,16 +45,16 @@ let colors_name = "zxoria"
 "" General {{{2
 "" [HL-20140327 2218] It'd be nice if all commands followed the format:
 "" name         cterm       ctermfg       ctermbg     gui           guifg           guibg
-hi Normal       cterm=none  ctermfg=252   ctermbg=233 gui=none      guifg=#d0d0d0   guibg=#101510
+hi Normal       cterm=none  ctermfg=252   ctermbg=232 gui=none      guifg=#d0d0d0   guibg=#101510
 hi ColorColumn  ctermbg=16  guibg=#000000
 " [KHL] why can i not set Cursor? is my terminal overriding it? :verbose hi Cursor shows what's expected
 hi Cursor       ctermfg=154               ctermbg=154 guibg=#ffaf00
-hi CursorColumn             cterm=none    ctermbg=232 guibg=#444444
-hi CursorLine               cterm=none    ctermbg=232 guibg=#1a2f1a
+hi CursorColumn             cterm=none    ctermbg=0 guibg=#444444
+hi CursorLine               cterm=none    ctermbg=0 guibg=#1a2f1a
 "hi Cursor cterm=none ctermbg=2 guibg=#7FFF00
 "hi Cursor cterm=none ctermbg=2 guibg=#7FFF00
 " [KHL] hi CursorLine                             ctermbg=237 guibg=#3a3a3a cterm=none gui=none
-hi CursorLineNr ctermfg=46
+hi CursorLineNr ctermfg=154 ctermbg=0
 hi Error        ctermfg=15  guifg=#ffffff ctermbg=1   guibg=#800000
 hi ErrorMsg     ctermfg=15  guifg=#ffffff ctermbg=1   guibg=#800000
 hi FoldColumn   ctermfg=247 guifg=#9e9e9e ctermbg=233 guibg=#121212
@@ -63,7 +63,7 @@ hi FoldColumn   ctermfg=247 guifg=#9e9e9e ctermbg=233 guibg=#121212
 hi Folded                   ctermfg=238   ctermbg=bg                guifg=#444444   guibg=bg
 hi IncSearch    cterm=none  ctermfg=0     ctermbg=10                                guibg=#00FF00
 hi Search       cterm=none  ctermfg=0     ctermbg=2                                 guibg=#008800
-hi LineNr       ctermfg=247 guifg=#9e9e9e ctermbg=233 guibg=#121212
+hi LineNr       ctermfg=247 guifg=#9e9e9e ctermbg=0 guibg=#121212
 hi MatchParen   ctermfg=188 guifg=#dfdfdf ctermbg=68  guibg=#5f87df cterm=bold gui=bold
 " TODO
 " hi MoreMsg
@@ -86,14 +86,14 @@ hi SpellCap     ctermfg=189 guifg=#dfdfff ctermbg=bg  guibg=bg      cterm=underl
 hi SpellRare    ctermfg=168 guifg=#df5f87 ctermbg=bg  guibg=bg      cterm=underline gui=underline
 hi SpellLocal   ctermfg=98  guifg=#875fdf ctermbg=bg  guibg=bg      cterm=underline gui=underline
 " [KHL] hi StatusLine   ctermfg=15  guifg=#ffffff ctermbg=239 guibg=#4e4e4e cterm=bold gui=bold
-hi StatusLine   ctermfg=154 guifg=#afff00 ctermbg=232 guibg=#080808 cterm=bold gui=bold
+hi StatusLine   ctermfg=154 guifg=#afff00 ctermbg=0 guibg=#080808 cterm=bold gui=bold
 " [KHL] hi StatusLineNC ctermfg=249 guifg=#b2b2b2 ctermbg=237 guibg=#3a3a3a cterm=none gui=none
-hi StatusLineNC ctermfg=8 guifg=#df5f00 ctermbg=232  guibg=#080808 cterm=none gui=none
+hi StatusLineNC ctermfg=8 guifg=#df5f00 ctermbg=0  guibg=#080808 cterm=none gui=none
 hi TabLine      ctermfg=fg  guifg=fg      ctermbg=242 guibg=#666666 cterm=none gui=none
 hi TabLineFill  ctermfg=fg  guifg=fg      ctermbg=237 guibg=#3a3a3a cterm=none gui=none
 " FIXME
 hi Title        ctermfg=225 guifg=#ffdfff
-hi Todo         ctermfg=0   guifg=#000000 ctermbg=184 guibg=#dfdf00
+hi Todo         ctermfg=1   ctermbg=bg guifg=#000000 guibg=#dfdf00
 hi Underlined   ctermfg=39  guifg=#00afff                           cterm=underline gui=underline
 " [KHL] hi VertSplit    ctermfg=237 guifg=#3a3a3a ctermbg=237 guibg=#3a3a3a cterm=none gui=none
 hi VertSplit    ctermfg=237 guifg=#3a3a3a ctermbg=bg guibg=bg cterm=none gui=none
